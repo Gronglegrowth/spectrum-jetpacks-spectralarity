@@ -4,6 +4,7 @@
   "experience": 16.0,
   "fluid": "spectrum:midnight_solution",
   "copy_nbt": true,
+  "disable_yield_upgrades": true,
   "ingredients": [
     {
       "item": "spectrumjetpacks:gemstone_jetpack"
