@@ -1,9 +1,9 @@
 package dev.mayaqq.spectrumJetpacks.items;
 
-import de.dafuqs.spectrum.energy.InkStorage;
-import de.dafuqs.spectrum.energy.InkStorageItem;
-import de.dafuqs.spectrum.energy.color.InkColor;
-import de.dafuqs.spectrum.energy.storage.FixedSingleInkStorage;
+import de.dafuqs.spectrum.api.energy.InkStorage;
+import de.dafuqs.spectrum.api.energy.InkStorageItem;
+import de.dafuqs.spectrum.api.energy.color.InkColor;
+import de.dafuqs.spectrum.api.energy.storage.FixedSingleInkStorage;
 import de.dafuqs.spectrum.items.trinkets.AshenCircletItem;
 import de.dafuqs.spectrum.items.trinkets.SpectrumTrinketItem;
 import de.dafuqs.spectrum.registries.SpectrumItems;

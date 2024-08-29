@@ -1,7 +1,7 @@
 package dev.mayaqq.spectrumJetpacks.utils;
 
-import de.dafuqs.spectrum.energy.color.InkColor;
-import de.dafuqs.spectrum.energy.storage.FixedSingleInkStorage;
+import de.dafuqs.spectrum.api.energy.color.InkColor;
+import de.dafuqs.spectrum.api.energy.storage.FixedSingleInkStorage;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketInventory;
@@ -58,7 +58,7 @@ public class EquipUtils {
     public static long getEnergy(ItemStack stack) {
         try {
             FixedSingleInkStorage inkStorage = ((JetpackItem) stack.getItem()).getEnergyStorage(stack);
-            return inkStorage.getEnergy(InkColor.of(DyeColor.PURPLE));
+            return inkStorage.getEnergy(InkColor.ofDyeColor(DyeColor.PURPLE));
         } catch (Exception e) {
             return 0;
         }

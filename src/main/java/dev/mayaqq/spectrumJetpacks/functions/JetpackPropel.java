@@ -1,6 +1,6 @@
 package dev.mayaqq.spectrumJetpacks.functions;
 
-import de.dafuqs.spectrum.energy.storage.FixedSingleInkStorage;
+import de.dafuqs.spectrum.api.energy.storage.FixedSingleInkStorage;
 import de.dafuqs.spectrum.particle.SpectrumParticleTypes;
 import dev.mayaqq.spectrumJetpacks.items.JetpackItem;
 import dev.mayaqq.spectrumJetpacks.utils.EquipUtils;

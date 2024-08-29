@@ -1,7 +1,7 @@
 package dev.mayaqq.spectrumJetpacks.networking;
 
-import de.dafuqs.spectrum.energy.color.InkColor;
-import de.dafuqs.spectrum.energy.storage.FixedSingleInkStorage;
+import de.dafuqs.spectrum.api.energy.color.InkColor;
+import de.dafuqs.spectrum.api.energy.storage.FixedSingleInkStorage;
 import dev.mayaqq.spectrumJetpacks.items.JetpackItem;
 import dev.mayaqq.spectrumJetpacks.utils.EquipUtils;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
