@@ -1,13 +1,11 @@
 package dev.mayaqq.spectrumJetpacks.renderer;
 
-import de.dafuqs.spectrum.render.HudRenderers;
 import dev.mayaqq.spectrumJetpacks.items.JetpackItem;
 import dev.mayaqq.spectrumJetpacks.utils.EquipUtils;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
 
 import static dev.mayaqq.spectrumJetpacks.registry.KeybindRegistry.*;

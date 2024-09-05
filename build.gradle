@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '1.6-SNAPSHOT'
 	id 'maven-publish'
+	id "me.modmuss50.mod-publish-plugin" version "0.4.5"
 }
 
 version = project.mod_version
@@ -18,6 +19,7 @@ repositories {
 	maven { url = "https://api.modrinth.com/maven" } // Revelationary, Additional Entity Attributes, Fractal Lib, Colorful Hearts
 	maven { url = "https://cfa2.cursemaven.com" }
 	maven { url = "https://repo.unascribed.com" } // Ears API
+	maven { url = "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/" } // Modonomicon
 	mavenCentral()
 }
 
@@ -32,6 +34,10 @@ dependencies {
 	modImplementation ("maven.modrinth:revelationary:${project.revelationary_version}")
 
 	modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
+
+	modImplementation ("com.github.Noaaan:Matchbooks:${project.matchbooks_version}")
+
+	modImplementation("com.klikli_dev:modonomicon-${project.minecraft_version}-fabric:${project.modonomicon_version}") { exclude(group: "com.klikli_dev") }
 
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") { exclude(group: "net.fabricmc.fabric-api") }
 	modApi("com.terraformersmc:modmenu:${project.modmenu_version}")
@@ -118,6 +124,39 @@ sourceSets {
 			srcDirs += [
 					'src/main/generated'
 			]
+		}
+	}
+}
+
+publishMods {
+	changelog = file("CHANGELOG.md").text.replace("@VERSION@", project.mod_version)
+	type = STABLE
+
+	curseforge("curseforge") {
+		accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+		minecraftVersions.add("1.20.1")
+		projectId = "824498"
+		modLoaders.add("fabric")
+		modLoaders.add("quilt")
+		file = remapJar.archiveFile
+		displayName = "Spectrum Jetpacks ${project.mod_version}"
+		version = "${project.mod_version}"
+		requires {
+			slug = "spectrum"
+		}
+	}
+
+	modrinth("modrinth") {
+		accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+		projectId = "iXT7GFmP"
+		minecraftVersions.add("1.20.1")
+		modLoaders.add("fabric")
+		modLoaders.add("quilt")
+		file = remapJar.archiveFile
+		displayName = "Spectrum Jetpacks ${project.mod_version}"
+		version = "${project.mod_version}"
+		requires {
+			slug = "spectrum"
 		}
 	}
 }
