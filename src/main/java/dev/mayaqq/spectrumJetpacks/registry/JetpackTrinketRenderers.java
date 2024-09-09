@@ -1,7 +1,7 @@
 package dev.mayaqq.spectrumJetpacks.registry;
 
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
-import dev.mayaqq.spectrumJetpacks.renderer.TrinketJetpackRenderer;
+import dev.mayaqq.spectrumJetpacks.client.renderer.TrinketJetpackRenderer;
 
 import static dev.mayaqq.spectrumJetpacks.registry.JetpackItems.BEDROCK_JETPACK;
 import static dev.mayaqq.spectrumJetpacks.registry.JetpackItems.GEMSTONE_JETPACK;

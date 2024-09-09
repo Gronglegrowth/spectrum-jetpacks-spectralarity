@@ -1,5 +1,6 @@
 package dev.mayaqq.spectrumJetpacks.mixin;
 
+import dev.mayaqq.spectrumJetpacks.items.JetpackItem;
 import dev.mayaqq.spectrumJetpacks.utils.EquipUtils;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -13,11 +14,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class ServerPlayNetworkHandlerMixin {
     @Shadow private boolean floating;
 
-    @Shadow public ServerPlayerEntity player;
-
     @Inject(method = "onPlayerMove", at = @At("TAIL"))
     private void onPlayerMove(CallbackInfo ci) {
-        if (EquipUtils.hasJetpack(this.player)) {
+        if (JetpackItem.equippedJetpack != null) {
             this.floating = false;
         }
     }

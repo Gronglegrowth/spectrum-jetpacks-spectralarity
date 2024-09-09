@@ -2,6 +2,7 @@ package dev.mayaqq.spectrumJetpacks.networking;
 
 import de.dafuqs.spectrum.api.energy.color.InkColor;
 import de.dafuqs.spectrum.api.energy.storage.FixedSingleInkStorage;
+import de.dafuqs.spectrum.api.energy.storage.SingleInkStorage;
 import dev.mayaqq.spectrumJetpacks.items.JetpackItem;
 import dev.mayaqq.spectrumJetpacks.utils.EquipUtils;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -23,11 +24,9 @@ public class C2SPackets {
             int working = buf.readInt();
             server.execute(() -> {
                 //particles, sounds, and energy drain
-                ItemStack jetpack = EquipUtils.getJetpack(player);
-                if (jetpack == null) {
-                    return;
-                }
-                FixedSingleInkStorage inkStorage = EquipUtils.getEnergyStorage(jetpack);
+                ItemStack jetpack = JetpackItem.equippedJetpack;
+                if (jetpack == null) return;
+                SingleInkStorage inkStorage = EquipUtils.getEnergyStorage(jetpack);
                 InkColor color = inkStorage.getStoredColor();
                 propellingMap.put(player, true);
                 if (tick && !player.isCreative()) {

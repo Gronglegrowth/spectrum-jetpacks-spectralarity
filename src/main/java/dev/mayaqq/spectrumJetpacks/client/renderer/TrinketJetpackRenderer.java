@@ -1,4 +1,4 @@
-package dev.mayaqq.spectrumJetpacks.renderer;
+package dev.mayaqq.spectrumJetpacks.client.renderer;
 
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.client.TrinketRenderer;
@@ -23,10 +23,11 @@ public class TrinketJetpackRenderer implements TrinketRenderer {
         matrices.translate(0, -0.2, -0.25);
 
         // Shifting
-        if(player.isInSneakingPose()) {
+        if (player.isInSneakingPose()) {
             matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(25));
             matrices.translate(0, -0.2, 0);
         }
+
 
         MinecraftClient.getInstance().getItemRenderer().renderItem(stack, ModelTransformationMode.FIXED, light, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, player.getWorld(), 0);
         matrices.pop();

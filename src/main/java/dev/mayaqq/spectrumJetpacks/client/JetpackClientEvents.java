@@ -1,6 +1,6 @@
-package dev.mayaqq.spectrumJetpacks.registry;
+package dev.mayaqq.spectrumJetpacks.client;
 
-import dev.mayaqq.spectrumJetpacks.renderer.JetpacksTextRenderer;
+import dev.mayaqq.spectrumJetpacks.client.renderer.JetpacksTextRenderer;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 
 public class JetpackClientEvents {

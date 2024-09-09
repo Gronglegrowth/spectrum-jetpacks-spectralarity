@@ -1,7 +1,5 @@
-package dev.mayaqq.spectrumJetpacks;
+package dev.mayaqq.spectrumJetpacks.client;
 
-import dev.mayaqq.spectrumJetpacks.registry.JetpackClientEvents;
-import dev.mayaqq.spectrumJetpacks.registry.JetpackKeybinds;
 import dev.mayaqq.spectrumJetpacks.registry.JetpackTrinketRenderers;
 import net.fabricmc.api.ClientModInitializer;
 

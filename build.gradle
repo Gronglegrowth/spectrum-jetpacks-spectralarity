@@ -38,11 +38,15 @@ dependencies {
 	modImplementation ("maven.modrinth:fractal-lib:${project.fractal_version}")
 	modImplementation ("com.github.DaFuqs:DimensionalReverb:${project.dimensional_reverb_version}")
 	modImplementation ("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
+	modImplementation ("com.github.emilyploszaj:step-height-entity-attribute:${project.step_height_attribute_version}")
 	modImplementation ("com.github.Noaaan:Matchbooks:${project.matchbooks_version}")
 	modImplementation ("com.klikli_dev:modonomicon-${project.minecraft_version}-fabric:${project.modonomicon_version}") { exclude(group: "com.klikli_dev") }
 
 	// Trinkets
 	modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
+	project.cca_modules.split(",").each{module -> {
+		modImplementation ("dev.onyxstudios.cardinal-components-api:cardinal-components-$module:${project.cca_version}")
+	}}
 
 	// Config
 	modApi ("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") { exclude(group: "net.fabricmc.fabric-api") }

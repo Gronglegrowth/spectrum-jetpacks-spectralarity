@@ -1,22 +1,21 @@
-package dev.mayaqq.spectrumJetpacks.renderer;
+package dev.mayaqq.spectrumJetpacks.client.renderer;
 
 import dev.mayaqq.spectrumJetpacks.items.JetpackItem;
 import dev.mayaqq.spectrumJetpacks.utils.EquipUtils;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 
-import static dev.mayaqq.spectrumJetpacks.registry.JetpackKeybinds.*;
+import static dev.mayaqq.spectrumJetpacks.client.JetpackKeybinds.*;
 
 public class JetpacksTextRenderer {
     public static void renderJetpackInfo(DrawContext drawContext) {
-        MinecraftClient mc = MinecraftClient.getInstance();
-        ClientPlayerEntity player = mc.player;
-        long energyNum = EquipUtils.getEnergy(EquipUtils.getJetpack(player));
-        if (EquipUtils.jetpackNumber(player) > 0) {
-            long energyPercent = energyNum / (((JetpackItem) EquipUtils.getJetpack(player).getItem()).maxInk / 100);
+        ItemStack jetpackStack = JetpackItem.equippedJetpack;
+        if (jetpackStack != null) {
+            long energyNum = EquipUtils.getEnergy(jetpackStack);
+            long energyPercent = energyNum / (((JetpackItem) jetpackStack.getItem()).maxInk / 100);
             String energyString = energyPercent + "%";
             if (energyPercent >= 50) {
                 energyString = "§a" + energyString;

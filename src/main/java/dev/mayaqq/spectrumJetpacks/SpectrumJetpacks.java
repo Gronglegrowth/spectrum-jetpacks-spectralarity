@@ -23,8 +23,10 @@ public class SpectrumJetpacks implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("To the sky!");
+		// Config
 		AutoConfig.register(SpectrumJetpacksConfig.class, JanksonConfigSerializer::new);
 		CONFIG = AutoConfig.getConfigHolder(SpectrumJetpacksConfig.class).getConfig();
+		// Registries
 		JetpackItems.register();
 		C2SPackets.register();
 		JetpackServerEvents.register();

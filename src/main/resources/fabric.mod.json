@@ -22,7 +22,7 @@
       "dev.mayaqq.spectrumJetpacks.SpectrumJetpacks"
     ],
     "client": [
-      "dev.mayaqq.spectrumJetpacks.SpectrumJetpacksClient"
+      "dev.mayaqq.spectrumJetpacks.client.SpectrumJetpacksClient"
     ],
     "modmenu": [
       "dev.mayaqq.spectrumJetpacks.integrations.ModMenuIntegration"
