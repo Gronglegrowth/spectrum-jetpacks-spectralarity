@@ -12,13 +12,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class SpectrumJetpacks implements ModInitializer {
-	public static final Logger LOGGER = LoggerFactory.getLogger("spectrumJetpacks");
-	public static Identifier id(String path) {
-		return new Identifier("spectrumjetpacks", path);
-	}
+	public static final String MOD_ID = "spectrumjetpacks";
+	public static final String MOD_NAME = "Spectrum Jetpacks";
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
+	// Config
 	public static SpectrumJetpacksConfig CONFIG;
-
-	//register items
 
 	@Override
 	public void onInitialize() {
@@ -30,5 +28,9 @@ public class SpectrumJetpacks implements ModInitializer {
 		JetpackItems.register();
 		C2SPackets.register();
 		JetpackServerEvents.register();
+	}
+
+	public static Identifier id(String path) {
+		return new Identifier(MOD_ID, path);
 	}
 }

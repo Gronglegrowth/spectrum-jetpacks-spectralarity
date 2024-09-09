@@ -4,18 +4,16 @@
   "version": "${version}",
 
   "name": "Spectrum Jetpacks",
-  "description": "Jetpacks but gay!",
+  "description": "Adds jetpacks but instead of energy it runs on ink from spectrum! Just play along the spectrum progression and you'll find them in the progression!",
   "authors": [
     "Mayaqq"
   ],
   "contact": {
-    "homepage": "https://mayaqq.dev",
-    "sources": "https://github.com/MayaqqDev/Spectrum-Jetpacks"
+    "sources": "https://github.com/MayaqqDev/Spectrum-Jetpacks",
+    "issues": "https://github.com/MayaqqDev/Spectrum-Jetpacks/issues"
   },
-
   "license": "LGPL-3",
   "icon": "assets/spectrumjetpacks/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -31,12 +29,20 @@
   "mixins": [
     "spectrumjetpacks.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.14.24",
-    "fabric-api": "*",
+    "fabricloader": ">=0.15.10",
     "minecraft": ">=1.20.1",
     "spectrum": ">=1.8.0",
     "java": ">=17"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/hue",
+        "modmenu.kofi": "https://ko-fi.com/mayaqq",
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/spectrum-jetpacks",
+        "modmenu.modrinth": "https://modrinth.com/mod/spectrum-jetpacks"
+      }
+    }
   }
 }

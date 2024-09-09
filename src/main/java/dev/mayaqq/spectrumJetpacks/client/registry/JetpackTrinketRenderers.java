@@ -1,4 +1,4 @@
-package dev.mayaqq.spectrumJetpacks.registry;
+package dev.mayaqq.spectrumJetpacks.client.registry;
 
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import dev.mayaqq.spectrumJetpacks.client.renderer.TrinketJetpackRenderer;

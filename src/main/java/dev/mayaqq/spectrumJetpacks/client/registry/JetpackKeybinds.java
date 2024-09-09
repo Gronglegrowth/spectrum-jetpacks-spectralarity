@@ -1,4 +1,4 @@
-package dev.mayaqq.spectrumJetpacks.client;
+package dev.mayaqq.spectrumJetpacks.client.registry;
 
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;

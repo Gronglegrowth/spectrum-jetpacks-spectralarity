@@ -33,8 +33,8 @@ import java.util.List;
 
 import static dev.mayaqq.spectrumJetpacks.SpectrumJetpacks.CONFIG;
 import static dev.mayaqq.spectrumJetpacks.SpectrumJetpacks.id;
-import static dev.mayaqq.spectrumJetpacks.client.JetpackKeybinds.hoverKey;
-import static dev.mayaqq.spectrumJetpacks.client.JetpackKeybinds.toggleKey;
+import static dev.mayaqq.spectrumJetpacks.client.registry.JetpackKeybinds.hoverKey;
+import static dev.mayaqq.spectrumJetpacks.client.registry.JetpackKeybinds.toggleKey;
 
 public class JetpackItem extends SpectrumTrinketItem implements InkStorageItem<SingleInkStorage>, InkPowered {
 
