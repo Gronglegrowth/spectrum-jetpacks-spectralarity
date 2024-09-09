@@ -5,7 +5,7 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.option.StickyKeyBinding;
 import org.lwjgl.glfw.GLFW;
 
-public class KeybindRegistry {
+public class JetpackKeybinds {
     public static KeyBinding toggleKey;
     public static KeyBinding hoverKey;
 

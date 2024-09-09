@@ -8,7 +8,7 @@ import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.text.Text;
 
-import static dev.mayaqq.spectrumJetpacks.registry.KeybindRegistry.*;
+import static dev.mayaqq.spectrumJetpacks.registry.JetpackKeybinds.*;
 
 public class JetpacksTextRenderer {
     public static void renderJetpackInfo(DrawContext drawContext) {

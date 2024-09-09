@@ -12,7 +12,7 @@ import java.util.HashMap;
 
 import static dev.mayaqq.spectrumJetpacks.SpectrumJetpacks.CONFIG;
 import static dev.mayaqq.spectrumJetpacks.SpectrumJetpacks.id;
-import static dev.mayaqq.spectrumJetpacks.registry.ServerEventRegistry.tick;
+import static dev.mayaqq.spectrumJetpacks.registry.JetpackServerEvents.tick;
 
 public class C2SPackets {
 

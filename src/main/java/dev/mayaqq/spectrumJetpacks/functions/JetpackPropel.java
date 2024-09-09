@@ -12,13 +12,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
 import static dev.mayaqq.spectrumJetpacks.SpectrumJetpacks.CONFIG;
 import static dev.mayaqq.spectrumJetpacks.SpectrumJetpacks.id;
-import static dev.mayaqq.spectrumJetpacks.registry.KeybindRegistry.*;
+import static dev.mayaqq.spectrumJetpacks.registry.JetpackKeybinds.*;
 
 
 public class JetpackPropel {

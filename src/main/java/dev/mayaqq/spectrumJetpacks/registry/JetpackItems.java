@@ -11,7 +11,7 @@ import net.minecraft.util.Rarity;
 import static dev.mayaqq.spectrumJetpacks.SpectrumJetpacks.CONFIG;
 import static dev.mayaqq.spectrumJetpacks.SpectrumJetpacks.id;
 
-public class ItemRegistry {
+public class JetpackItems {
 
     public static final JetpackItem GEMSTONE_JETPACK = Registry.register(
             Registries.ITEM, id("gemstone_jetpack"), new JetpackItem(new FabricItemSettings().rarity(Rarity.RARE), id("gemstone_jetpack"),

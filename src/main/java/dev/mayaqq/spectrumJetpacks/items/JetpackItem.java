@@ -4,9 +4,7 @@ import de.dafuqs.spectrum.api.energy.InkStorage;
 import de.dafuqs.spectrum.api.energy.InkStorageItem;
 import de.dafuqs.spectrum.api.energy.color.InkColor;
 import de.dafuqs.spectrum.api.energy.storage.FixedSingleInkStorage;
-import de.dafuqs.spectrum.items.trinkets.AshenCircletItem;
 import de.dafuqs.spectrum.items.trinkets.SpectrumTrinketItem;
-import de.dafuqs.spectrum.registries.SpectrumItems;
 import dev.emi.trinkets.api.SlotReference;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
@@ -20,8 +18,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import static dev.mayaqq.spectrumJetpacks.registry.KeybindRegistry.hoverKey;
-import static dev.mayaqq.spectrumJetpacks.registry.KeybindRegistry.toggleKey;
+import static dev.mayaqq.spectrumJetpacks.registry.JetpackKeybinds.hoverKey;
+import static dev.mayaqq.spectrumJetpacks.registry.JetpackKeybinds.toggleKey;
 
 public class JetpackItem extends SpectrumTrinketItem implements InkStorageItem<FixedSingleInkStorage> {
 

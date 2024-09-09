@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 
 import static dev.mayaqq.spectrumJetpacks.SpectrumJetpacks.CONFIG;
 
-public class ServerEventRegistry {
+public class JetpackServerEvents {
     public static boolean tick = false;
     private static int tickCounter = 0;
     public static void register() {

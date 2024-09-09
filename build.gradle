@@ -9,39 +9,46 @@ group = project.maven_group
 
 repositories {
 	// Spectrum Repos
-	maven { url = "https://jitpack.io" } // Spectrum, Arrowhead, Dimensional Reverb, Step Height Entity Attribute
+	mavenCentral()
 	maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
 	maven { url = "https://maven.terraformersmc.com/" } // Modmenu, EMI, Trinkets
 	maven { url = "https://maven.nucleoid.xyz/" } // Common Protection API
 	maven { url = "https://maven.blamejared.com" } // Patchouli
 	maven { url = "https://maven.ladysnake.org/releases" } // Cardinal Components API
-	//maven { url = "https://maven.jamieswhiteshirt.com/libs-release/" } // Entity Reach Attribute
+	maven { url = "https://maven.jamieswhiteshirt.com/libs-release/" } // Entity Reach Attribute
 	maven { url = "https://api.modrinth.com/maven" } // Revelationary, Additional Entity Attributes, Fractal Lib, Colorful Hearts
 	maven { url = "https://cfa2.cursemaven.com" }
 	maven { url = "https://repo.unascribed.com" } // Ears API
 	maven { url = "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/" } // Modonomicon
-	mavenCentral()
+	maven { url = "https://jitpack.io" } // Spectrum, Arrowhead, Dimensional Reverb, Step Height Entity Attribute
 }
 
 dependencies {
+	// Minecraft + fabric
 	minecraft ("com.mojang:minecraft:${project.minecraft_version}")
 	mappings ("net.fabricmc:yarn:${project.yarn_mappings}:v2")
 	modImplementation ("net.fabricmc:fabric-loader:${project.loader_version}")
-
+	// FAPI
 	modImplementation ("net.fabricmc.fabric-api:fabric-api:${project.fabric_version}")
-
-	modImplementation ("com.github.DaFuqs:Spectrum:${project.spectrum_version}")
+	// Spectrum
+	modImplementation ("maven.modrinth:Spectrum:${project.spectrum_version}")
 	modImplementation ("maven.modrinth:revelationary:${project.revelationary_version}")
+	modImplementation ("maven.modrinth:AdditionalEntityAttributes:${project.aea_version}")
+	modImplementation ("com.github.DaFuqs:Arrowhead:${project.arrowhead_version}")
+	modImplementation ("maven.modrinth:fractal-lib:${project.fractal_version}")
+	modImplementation ("com.github.DaFuqs:DimensionalReverb:${project.dimensional_reverb_version}")
+	modImplementation ("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_entity_attributes_version}")
+	modImplementation ("com.github.Noaaan:Matchbooks:${project.matchbooks_version}")
+	modImplementation ("com.klikli_dev:modonomicon-${project.minecraft_version}-fabric:${project.modonomicon_version}") { exclude(group: "com.klikli_dev") }
 
+	// Trinkets
 	modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
 
-	modImplementation ("com.github.Noaaan:Matchbooks:${project.matchbooks_version}")
+	// Config
+	modApi ("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") { exclude(group: "net.fabricmc.fabric-api") }
+	modApi ("com.terraformersmc:modmenu:${project.modmenu_version}")
 
-	modImplementation("com.klikli_dev:modonomicon-${project.minecraft_version}-fabric:${project.modonomicon_version}") { exclude(group: "com.klikli_dev") }
-
-	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") { exclude(group: "net.fabricmc.fabric-api") }
-	modApi("com.terraformersmc:modmenu:${project.modmenu_version}")
-
+	// Item viewer
 	switch (recipe_viewer.toLowerCase(Locale.ROOT)) {
 		case "rei": modLocalRuntime("me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"); break
 		case "emi": modLocalRuntime("dev.emi:emi-fabric:${emi_version}"); break
