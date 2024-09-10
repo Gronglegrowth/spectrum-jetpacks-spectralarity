@@ -2,6 +2,7 @@ package dev.mayaqq.spectrumJetpacks;
 
 import dev.mayaqq.spectrumJetpacks.config.SpectrumJetpacksConfig;
 import dev.mayaqq.spectrumJetpacks.networking.C2SPackets;
+import dev.mayaqq.spectrumJetpacks.registry.JetpackItemGroups;
 import dev.mayaqq.spectrumJetpacks.registry.JetpackItems;
 import dev.mayaqq.spectrumJetpacks.registry.JetpackServerEvents;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -28,6 +29,7 @@ public class SpectrumJetpacks implements ModInitializer {
 		JetpackItems.register();
 		C2SPackets.register();
 		JetpackServerEvents.register();
+		JetpackItemGroups.init();
 	}
 
 	public static Identifier id(String path) {
