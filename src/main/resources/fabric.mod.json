@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "spectrumjetpacks",
+  "version": "${version}",
+
+  "name": "Spectrum Jetpacks (Spectralarity)",
+  "description": "Jetpacks but gay!",
+  "authors": [
+    "Mayaqq, EsetKalenko"
+  ],
+  "contact": {
+    "homepage": "https://mayaqq.dev",
+    "sources": "https://github.com/MayaqqDev/Spectrum-Jetpacks"
+  },
+
+  "license": "LGPL-3",
+  "icon": "assets/spectrumjetpacks/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.mayaqq.spectrumJetpacks.SpectrumJetpacks"
+    ],
+    "client": [
+      "dev.mayaqq.spectrumJetpacks.SpectrumJetpacksClient"
+    ],
+    "modmenu": [
+      "dev.mayaqq.spectrumJetpacks.integrations.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "spectrumjetpacks.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.15.7",
+    "fabric-api": "*",
+    "minecraft": "~1.19.2",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
